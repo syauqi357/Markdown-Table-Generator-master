@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.headTitle {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+.cta_xt1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: small;
+  letter-spacing: 0.4px;
+  background-color: #ececec;
+  padding: 7px;
+  border: 0.2px solid #cacaca;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta_xt1:hover {
+  background-color: #e6e6e6;
+  border: 0.2px solid #a8a8a8;
+  cursor: default;
+}
+
+.textEdit {
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 0.32em;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.textEdit:focus {
+  outline: none;
+  /* box-shadow: 0 0 5px #719ece; */
+  border: 1px solid #719ece;
+}
+
+/* from html inline style injection */
+#markdownResult {
+  padding: 5px;
+  display: flex;
+}
+
+#markdownResult > table {
+  margin: auto;
+}
+
+#markdownResult > table,
+tr,
+td,
+th {
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+td,
+th {
+  padding: 3px;
+}
+
+.detailsPanel {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* align-items: center; */
+  /* gap: 1px; */
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  gap: 1rem;
+  /* background-color: yellow; */
+}
+
+.delimiter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  /* background-color: red; */
+  padding: 0.7em 2em;
+}
+
+.controlMenus {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  /* gap: 12px; */
+  background-color: cyan;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#tablemaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+}
+
+.wikiReff {
+  /* background-color: greenyellow; */
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 12px;
+  /* background-color: cyan; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* width: 80%; */
+}
+
+.wikiCheck {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  /* background-color: #719ece; */
+}
+.cellcol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  /* background-color: #fff; */
+}
+
+.tableCaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f0f0f0; */
+  padding: 0.5em;
+  /* margin-top: 1em; */
+}
+
+.resultTable {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0.32em;
+  /* background-color: yellow; */
+}
+
+.resultTable > div {
+  width: 80%;
+}
+
+.failed {
+  margin: 1em;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  display: none;
+  background-color: #d83c3c;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.failed span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.failed svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+.success {
+  text-align: center;
+  color: #008000;
+  font-size: 18px;
+  font-weight: bold;
+  /* display: none; */
+  background-color: #f8f8f8;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+#tableResult {
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  padding: 0.8em;
+  width: 100%;
+  border-radius: 0.32em;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+#tableResult:focus {
+  outline: none;
+  /* box-shadow: 0 0 5px #719ece; */
+  border: 1px solid #719ece;
+}
