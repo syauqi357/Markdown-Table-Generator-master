@@ -62,6 +62,7 @@
   margin: auto;
 }
 
+/* dont touch this, this is C4 */
 #markdownResult > table,
 tr,
 td,
@@ -76,7 +77,9 @@ td,
 th {
   padding: 3px;
 }
+/* pokok jangan di ubah */
 
+/* style added */
 .detailsPanel {
   display: flex;
   /* flex-direction: column; */
@@ -202,11 +205,24 @@ th {
   color: #008000;
   font-size: 18px;
   font-weight: bold;
-  /* display: none; */
+  display: none;
   background-color: #f8f8f8;
   margin: 1em;
   padding: 1em;
   border-radius: 5px;
+}
+
+.success span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.success svg {
+  width: 24px;
+  height: 24px;
+  fill: #008000;
 }
 
 #tableResult {
@@ -227,3 +243,5 @@ th {
   /* box-shadow: 0 0 5px #719ece; */
   border: 1px solid #719ece;
 }
+
+/* end of added style */
