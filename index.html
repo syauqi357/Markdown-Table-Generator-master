@@ -5,12 +5,16 @@
     <title>Markdown Table Maker</title>
     <link rel="stylesheet" href="css/styleconf.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@459&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body id="tablemaker">
-    <div
-      style="width: 100%; max-width: 800px; text-align: center; margin: auto"
-    >
+    <div>
       <h2 class="headTitle">Markdown Table Generator</h2>
       <hr />
       <h4 class="cta_xt1">
@@ -37,23 +41,25 @@
               <option value="space">Space</option>
             </select>
           </div>
-          <label>
-            <input type="checkbox" id="checkCenterText" checked /> Center-align
-            text
-          </label>
-          <br />
-          <label>
-            <input type="checkbox" id="checkBoldHeader" checked /> Bold first
-            row
-          </label>
-          <br />
-          <label>
-            <input type="checkbox" id="checkBoldFooter" /> Bold last row
-          </label>
-          <br />
-          <label>
-            <input type="checkbox" id="checkFormatNumbers" /> Format numbers
-          </label>
+          <div class="checkControl">
+            <label>
+              <input type="checkbox" id="checkCenterText" checked />
+              Center-align text
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" id="checkBoldHeader" checked /> Bold first
+              row
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" id="checkBoldFooter" /> Bold last row
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" id="checkFormatNumbers" /> Format numbers
+            </label>
+          </div>
         </div>
         <div class="wikiReff">
           <!-- head of wiki reff -->
@@ -63,7 +69,21 @@
             <input type="checkbox" id="checkWikiFormat" /> Use Wiki table (<a
               href="https://en.wikipedia.org/wiki/Help:Table"
               target="_blank"
-              >?</a
+              ><span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  id="Help-Fill--Streamline-Rounded-Fill-Material"
+                  height="24"
+                  width="24"
+                >
+                  
+                  <path
+                    fill="currentColor"
+                    d="M12.10075 17.825c0.26615 0 0.4909 -0.0919 0.67425 -0.27575s0.275 -0.40885 0.275 -0.675c0 -0.26615 -0.0919 -0.4909 -0.27575 -0.67425s-0.40885 -0.275 -0.675 -0.275c-0.26615 0 -0.4909 0.0919 -0.67425 0.27575s-0.275 0.40885 -0.275 0.675c0 0.26615 0.0919 0.4909 0.27575 0.67425s0.40885 0.275 0.675 0.275Zm-0.094 4.175c-1.379 0 -2.67485 -0.2625 -3.8875 -0.7875 -1.21285 -0.525 -2.2734 -1.24165 -3.18175 -2.15 -0.908335 -0.90835 -1.625 -1.9695 -2.15 -3.1835C2.2625 14.665 2 13.36785 2 11.9875s0.2625 -2.6775 0.7875 -3.8915c0.525 -1.214 1.241665 -2.271 2.15 -3.171 0.90835 -0.9 1.9695 -1.6125 3.1835 -2.1375C9.335 2.2625 10.63215 2 12.0125 2s2.6775 0.2625 3.8915 0.7875c1.214 0.525 2.271 1.2375 3.171 2.1375 0.9 0.9 1.6125 1.95835 2.1375 3.175C21.7375 9.31665 22 10.6144 22 11.99325c0 1.379 -0.2625 2.67485 -0.7875 3.8875 -0.525 1.21285 -1.2375 2.2719 -2.1375 3.17725 -0.9 0.90515 -1.95835 1.62185 -3.175 2.15C14.68335 21.736 13.3856 22 12.00675 22Zm0.0625 -14.5c0.50385 0 0.9474 0.15415 1.33075 0.4625 0.38335 0.30835 0.575 0.70165 0.575 1.18 0 0.43835 -0.1304 0.8194 -0.39125 1.14325 -0.26085 0.32385 -0.5554 0.6286 -0.88375 0.91425 -0.38335 0.31665 -0.71665 0.66985 -1 1.0595 -0.28335 0.38985 -0.425 0.82835 -0.425 1.3155 0 0.18335 0.07 0.32915 0.21 0.4375 0.14 0.10835 0.30335 0.1625 0.49 0.1625 0.2 0 0.36565 -0.06665 0.497 -0.2 0.13115 -0.13335 0.2155 -0.3 0.253 -0.5 0.05 -0.35 0.18335 -0.66665 0.4 -0.95s0.4686 -0.53985 0.75575 -0.7695c0.41285 -0.337 0.7526 -0.7305 1.01925 -1.1805 0.26665 -0.45 0.4 -0.9384 0.4 -1.46525 0 -0.83985 -0.3125 -1.5389 -0.9375 -2.09725 -0.625 -0.55835 -1.36625 -0.8375 -2.22375 -0.8375 -0.5925 0 -1.16375 0.125 -1.71375 0.375s-1 0.61665 -1.35 1.1c-0.11665 0.16665 -0.17085 0.34585 -0.1625 0.5375 0.00835 0.19165 0.08725 0.34585 0.23675 0.4625 0.19015 0.13335 0.38725 0.175 0.59125 0.125 0.20385 -0.05 0.37365 -0.16665 0.5095 -0.35 0.2125 -0.29835 0.47815 -0.5271 0.797 -0.68625 0.31865 -0.15915 0.6594 -0.23875 1.02225 -0.23875Z"
+                    stroke-width="0.5"
+                  ></path></svg></span></a
             >)
           </label>
           <!-- color cell -->
@@ -106,8 +126,8 @@
               ></path>
             </svg>
           </span>
-          <br />
-          Press Ctr+C to copy
+
+          Press <code>Ctrl</code> + <code>C</code> to copy
         </div>
 
         <!-- failed -->
@@ -140,71 +160,65 @@
         </div>
       </div>
 
-      <br />
-      <div
-        style="text-align: center; font-size: 14px; display: none"
-        id="previewSuccess"
-      >
-        <strong>Preview of table</strong>
-        <br />
+      <!-- preview -->
+      <div class="previewConf">
+        <div class="tablePreview" id="previewSuccess">
+          <strong>Preview of table</strong>
+        </div>
+        <div id="markdownResult">
+          <!-- generated here -->
+        </div>
       </div>
-      <br />
-      <div
-        id="markdownResult"
-        style="background-color: #ffffff; margin: auto"
-      ></div>
+      <!-- preview end -->
     </div>
-    <div style="height: 30px"></div>
-    <hr />
-    <div style="height: 30px"></div>
-    <div style="text-align: center">
-      <a
-        href="https://github.com/jakebathman/Markdown-Table-Generator/issues/new"
-        target="_blank"
-        >Report a bug (GitHub account required)</a
-      >
-    </div>
-    <br />
-    <div style="text-align: center">
-      <a
-        href="https://github.com/jakebathman/Markdown-Table-Generator"
-        target="_blank"
-        >Source Code</a
-      >
-    </div>
-    <br />
-    <div style="text-align: center; color: #666">
-      <p>
-        Copyright © 2016 Jake Bathman (<a href="https://github.com/jakebathman/"
-          >github.com/jakebathman</a
-        >)
-      </p>
-      <p>
-        This work is free. You can redistribute it and/or modify it under the
-        terms of the Do What The Fuck You Want To Public License, Version 2, as
-        published by Sam Hocevar. See
-        <a target="_blank" href="http://www.wtfpl.net/"
-          >http://www.wtfpl.net/</a
-        >
-        for more details.
-      </p>
 
-      <a target="_blank" href="http://www.wtfpl.net/"
-        ><img
-          src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png"
-          width="80"
-          height="31"
-          alt="WTFPL"
-      /></a>
-      <a target="_blank" href="http://www.wtfpl.net/">
-        <img
-          src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
-          width="80"
-          height="15"
-          alt="WTFPL"
-        />
-      </a>
-    </div>
+    <footer>
+      <div>
+        <!-- report bug -->
+        <div class="reportBugs">
+          <a
+            href="https://github.com/jakebathman/Markdown-Table-Generator/issues/new"
+            target="_blank"
+            >Report a bug (GitHub account required)</a
+          >
+        </div>
+        <!-- license -->
+        <div>
+          <p>
+            Copyright © 2016 Jake Bathman (<a
+              href="https://github.com/jakebathman/"
+              >github.com/jakebathman</a
+            >)
+          </p>
+          <p>
+            This work is free. You can redistribute it and/or modify it under
+            the terms of the Do What The Fuck You Want To Public License,
+            Version 2, as published by Sam Hocevar. See
+            <a target="_blank" href="http://www.wtfpl.net/"
+              >http://www.wtfpl.net/</a
+            >
+            for more details.
+          </p>
+
+          <a target="_blank" href="http://www.wtfpl.net/"
+            ><img
+              src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png"
+              width="80"
+              height="31"
+              alt="WTFPL"
+          /></a>
+          <a target="_blank" href="http://www.wtfpl.net/">
+            <img
+              src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+              width="80"
+              height="15"
+              alt="WTFPL"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
     <!-- Local jQuery file included, but switch the comments below to load from Google's jQuery CDN instead -->
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <script src="js/jquery-2.1.4.min.js"></script>
