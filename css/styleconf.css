@@ -1,15 +1,25 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Text&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: "Stack Sans Text", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 459; */
+  font-style: normal;
 }
 
 .headTitle {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
   font-weight: 700;
 }
 
@@ -36,7 +46,7 @@
 .textEdit {
   display: flex;
   justify-content: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   font-size: 14px;
   width: 100%;
   padding: 0.8em;
@@ -44,6 +54,7 @@
   border: 1px solid #ccc;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .textEdit:focus {
@@ -98,28 +109,48 @@ th {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 5px;
   /* background-color: red; */
-  padding: 0.7em 2em;
+  padding: 0.7em 0em;
+  /* font-size: 0.9rem; */
+}
+
+.delimiter label {
+  /* background-color: #719ece; */
+  font-size: 14px;
+  width: 12em;
 }
 
 .controlMenus {
-  padding: 0.5em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: start;
   /* gap: 12px; */
-  background-color: cyan;
+  /* background-color: cyan; */
+  gap: 0.2em;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.checkControl {
+  display: flex;
+  flex-direction: column;
+
+  align-items: start;
+  gap: 0.2px;
 }
 
 #tablemaker {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1em;
+  /* margin: 1em; */
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  margin: auto;
 }
 
 .wikiReff {
@@ -236,6 +267,7 @@ th {
   border: 1px solid #ccc;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
+  font-family: "JetBrains Mono", monospace;
 }
 
 #tableResult:focus {
@@ -245,3 +277,145 @@ th {
 }
 
 /* end of added style */
+
+.tablePreview {
+  /* background-color: #a8a8a8; */
+  padding: 0.4em;
+  /* margin-top: 0.4em; */
+  text-align: center;
+  font-size: 14px;
+  font-size: 2em;
+  /* display: none; */
+}
+
+.previewConf {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  /* background-color: red; */
+}
+
+#markdownResult {
+  background-color: #ffffff;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+/* code block */
+code {
+  background: linear-gradient(145deg, #e0e0e0, #c8c8c8);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  border: 1px solid #a0a0a0;
+  border-bottom: 2px solid #909090;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  color: #222;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  position: relative;
+  display: inline-block;
+  animation: keyPulse 3s infinite ease-in-out;
+  transition: all 0.1s ease;
+}
+
+/* Add a subtle pressed effect on active state */
+code:active {
+  transform: translateY(1px);
+  border-bottom: 1px solid #909090;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Softer pulsing animation */
+@keyframes keyPulse {
+  0% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 0 0 rgba(200, 200, 200, 0.3);
+  }
+  50% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6),
+      0 0 0 3px rgba(200, 200, 200, 0.1);
+  }
+  100% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 0 0 rgba(200, 200, 200, 0.3);
+  }
+}
+
+/* Optional: Even lighter subtle glow */
+code.glow {
+  animation: keyGlowPulse 3s infinite ease-in-out;
+}
+
+@keyframes keyGlowPulse {
+  0% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 3px rgba(150, 150, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 8px rgba(150, 150, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 3px rgba(150, 150, 255, 0.2);
+  }
+}
+
+footer {
+  position: relative;
+  left: 0;
+  right: 0;
+  /* background-color: #719ece; */
+  width: 90vw; /* Use viewport width */
+  padding: 1em;
+  font-size: 13px;
+  /* margin-left: calc(-50vw + 50%); Center it properly */
+}
+
+footer > div {
+  width: 100%; /* Make the inner div full width too */
+  max-width: 100%; /* Remove any max-width restriction */
+}
+
+/* Keep the rest of your styles */
+.reportBugs {
+  margin-bottom: 10px;
+}
+
+.reportBugs a {
+  color: #0062e2;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  background-color: rgba(73, 201, 240, 0.185);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.reportBugs a:hover {
+  background-color: #e9f6ff;
+}
+
+footer p {
+  margin: 5px 0;
+  line-height: 1.4;
+  color: #696969;
+}
+
+footer a {
+  color: #0056a1;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #40b3ff;
+}
+
+footer img {
+  margin: 5px;
+  vertical-align: middle;
+}
