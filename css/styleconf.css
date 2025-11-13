@@ -11,7 +11,6 @@
 body {
   font-family: "Stack Sans Text", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: 459; */
   font-style: normal;
 }
 
@@ -27,7 +26,6 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: small;
   letter-spacing: 0.4px;
   background-color: #ececec;
@@ -46,7 +44,6 @@ body {
 .textEdit {
   display: flex;
   justify-content: center;
-  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   font-size: 14px;
   width: 100%;
   padding: 0.8em;
@@ -59,7 +56,6 @@ body {
 
 .textEdit:focus {
   outline: none;
-  /* box-shadow: 0 0 5px #719ece; */
   border: 1px solid #719ece;
 }
 
@@ -93,16 +89,10 @@ th {
 /* style added */
 .detailsPanel {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
-  /* align-items: center; */
-  /* gap: 1px; */
-  /* margin-top: 10px; */
-  /* margin-bottom: 10px; */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
+  font-size: 13px;
   gap: 1rem;
-  /* background-color: yellow; */
 }
 
 .delimiter {
@@ -110,13 +100,10 @@ th {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  /* background-color: red; */
   padding: 0.7em 0em;
-  /* font-size: 0.9rem; */
 }
 
 .delimiter label {
-  /* background-color: #719ece; */
   font-size: 14px;
   width: 12em;
 }
@@ -127,8 +114,6 @@ th {
   flex-direction: column;
   justify-content: flex-start;
   align-items: start;
-  /* gap: 12px; */
-  /* background-color: cyan; */
   gap: 0.2em;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -137,7 +122,6 @@ th {
 .checkControl {
   display: flex;
   flex-direction: column;
-
   align-items: start;
   gap: 0.2px;
 }
@@ -146,49 +130,42 @@ th {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin: 1em; */
   width: 100%;
-  max-width: 200px;
+  max-width: 900px;
   text-align: center;
   margin: auto;
 }
 
 .wikiReff {
-  /* background-color: greenyellow; */
   padding: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: start;
   gap: 12px;
-  /* background-color: cyan; */
   border: 1px solid #ccc;
   border-radius: 5px;
-  /* width: 80%; */
 }
 
 .wikiCheck {
   display: flex;
   align-items: center;
   gap: 0.4em;
-  /* background-color: #719ece; */
 }
+
 .cellcol {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 1em;
-  /* background-color: #fff; */
 }
 
 .tableCaption {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #f0f0f0; */
   padding: 0.5em;
-  /* margin-top: 1em; */
 }
 
 .resultTable {
@@ -199,7 +176,6 @@ th {
   justify-content: center;
   width: 100%;
   border-radius: 0.32em;
-  /* background-color: yellow; */
 }
 
 .resultTable > div {
@@ -259,7 +235,6 @@ th {
 #tableResult {
   display: flex;
   justify-content: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   padding: 0.8em;
   width: 100%;
@@ -272,27 +247,22 @@ th {
 
 #tableResult:focus {
   outline: none;
-  /* box-shadow: 0 0 5px #719ece; */
   border: 1px solid #719ece;
 }
 
 /* end of added style */
 
 .tablePreview {
-  /* background-color: #a8a8a8; */
   padding: 0.4em;
-  /* margin-top: 0.4em; */
   text-align: center;
   font-size: 14px;
   font-size: 2em;
-  /* display: none; */
 }
 
 .previewConf {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  /* background-color: red; */
 }
 
 #markdownResult {
@@ -368,11 +338,9 @@ footer {
   position: relative;
   left: 0;
   right: 0;
-  /* background-color: #719ece; */
-  width: 90vw; /* Use viewport width */
+  width: 90vw;
   padding: 1em;
   font-size: 13px;
-  /* margin-left: calc(-50vw + 50%); Center it properly */
 }
 
 footer > div {
