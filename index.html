@@ -13,25 +13,34 @@
     />
   </head>
 
+  <!-- body table generator -->
   <body id="tablemaker">
     <div>
+      <!-- head title -->
       <h2 class="headTitle">Markdown Table Generator</h2>
       <hr />
+
+      <!-- introduction dan petunjuk -->
       <h4 class="cta_xt1">
         Paste here from Excel or another delimited source (such as a CSV file)
         and get a markdown-ready table below.<br />Accepts tab-delimited and
         comma-delimited text.
       </h4>
       <br />
+      <!-- textarea input -->
       <textarea
         class="textEdit"
         id="pastedText"
         placeholder="Paste here"
         rows="12"
       ></textarea>
+
       <br />
+      <!-- control panel for table options -->
       <div class="detailsPanel">
+        <!-- control menus -->
         <div class="controlMenus">
+          <!-- delimiter -->
           <div class="delimiter">
             <label>Choose Delimiter: </label>
             <select id="selectDelimType">
@@ -41,26 +50,33 @@
               <option value="space">Space</option>
             </select>
           </div>
+          <!-- checkboxes menus -->
           <div class="checkControl">
+            <!-- opsi rata tengah -->
             <label>
               <input type="checkbox" id="checkCenterText" checked />
               Center-align text
             </label>
             <br />
+            <!-- opsi bold header -->
             <label>
               <input type="checkbox" id="checkBoldHeader" checked /> Bold first
               row
             </label>
             <br />
+            <!-- opsi bold footer -->
             <label>
               <input type="checkbox" id="checkBoldFooter" /> Bold last row
             </label>
             <br />
+            <!-- opsi format angka -->
             <label>
               <input type="checkbox" id="checkFormatNumbers" /> Format numbers
             </label>
           </div>
         </div>
+
+        <!-- wiki table options -->
         <div class="wikiReff">
           <!-- head of wiki reff -->
           <h5>Wiki tables</h5>
@@ -69,7 +85,9 @@
             <input type="checkbox" id="checkWikiFormat" /> Use Wiki table (<a
               href="https://en.wikipedia.org/wiki/Help:Table"
               target="_blank"
-              ><span
+              >
+              <!-- icon help -->
+              <span
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -87,15 +105,21 @@
           </label>
           <!-- color cell -->
           <div class="cellcol">
+            <!-- empty cell color -->
             <label>
               Empty cell color
               <input type="text" id="emptyCellBackgroundColor" />
             </label>
+            <!-- header cell color -->
             <label>
               Header cell color <input type="text" id="headerBackgroundColor" />
             </label>
           </div>
+
+          <!-- table caption -->
           <div class="tableCaption">
+
+            <!-- input table captions -->
             <label>
               Table caption <input type="text" id="inpTableCaption" disabled />
             </label>
@@ -103,12 +127,16 @@
         </div>
       </div>
 
-      <!-- result -->
+      <!-- result class -->
       <div class="resultTable">
         <!-- success -->
         <div class="success" id="copySuccess">
+          
+          <!-- success message -->
           <span>
             Done!
+
+            <!-- success icon check icon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -117,7 +145,7 @@
               height="24"
               width="24"
             >
-              <desc>Check Fill Streamline Icon: https://streamlinehq.com</desc>
+              <!-- <desc>Check Fill Streamline Icon: https://streamlinehq.com</desc> -->
               <path
                 fill="#000000"
                 d="m9.45 15.6999 9.075 -9.075c0.1545 -0.15 0.33485 -0.225 0.541 -0.225 0.206 0 0.384 0.0754 0.534 0.22625 0.15 0.151 0.225 0.33015 0.225 0.5375 0 0.2075 -0.075 0.38625 -0.225 0.53625l-9.625 9.625c-0.15 0.15 -0.325 0.225 -0.525 0.225s-0.375 -0.075 -0.525 -0.225l-4.549975 -4.55c-0.15 -0.15115 -0.220835 -0.3306 -0.2125 -0.53825 0.00833 -0.20785 0.087915 -0.38675 0.23875 -0.53675 0.151 -0.15 0.330165 -0.225 0.5375 -0.225 0.207475 0 0.386225 0.075 0.536225 0.225l3.975 4Z"
@@ -126,11 +154,14 @@
             </svg>
           </span>
 
+          <!-- success message -->
+           <!-- instruksi -->
           Press <code>Ctrl</code> + <code>C</code> to copy
         </div>
 
         <!-- failed -->
         <div class="failed" id="copyError">
+          <!-- error icon cautions -->
           <span>
             Error!
             <svg
@@ -141,9 +172,9 @@
               height="24"
               width="24"
             >
-              <desc>
+              <!-- <desc>
                 Warning Fill Streamline Icon: https://streamlinehq.com
-              </desc>
+              </desc> -->
               <path
                 fill="currentColor"
                 d="M2.30047 21c-0.15 0 -0.280415 -0.0344 -0.39125 -0.10325 -0.110835 -0.06865 -0.197085 -0.15925 -0.25875 -0.27175 -0.0695 -0.11 -0.107665 -0.22915 -0.1145 -0.3575 -0.007 -0.12835 0.031165 -0.25915 0.1145 -0.3925L11.35045 3.125c0.08335 -0.133335 0.1792 -0.229165 0.2875 -0.2875 0.10835 -0.058335 0.2292 -0.0875 0.3625 -0.0875 0.13335 0 0.2542 0.029165 0.3625 0.0875 0.10835 0.058335 0.2042 0.154165 0.2875 0.2875l9.7 16.75c0.08335 0.13335 0.1215 0.26415 0.1145 0.3925 -0.0068 0.12835 -0.045 0.2475 -0.1145 0.3575 -0.06165 0.1125 -0.1479 0.2031 -0.25875 0.27175 -0.1108 0.06885 -0.24125 0.10325 -0.39125 0.10325H2.30047Zm9.80448 -2.925c0.2137 0 0.39135 -0.07235 0.533 -0.217 0.1417 -0.1445 0.2125 -0.32365 0.2125 -0.5375 0 -0.21365 -0.0723 -0.39135 -0.217 -0.533 -0.1445 -0.14165 -0.32365 -0.2125 -0.5375 -0.2125 -0.21365 0 -0.3913 0.07235 -0.533 0.217 -0.14165 0.1445 -0.2125 0.32365 -0.2125 0.5375 0 0.21365 0.07235 0.39135 0.217 0.533 0.1445 0.14165 0.3237 0.2125 0.5375 0.2125Zm0 -2.775c0.2137 0 0.39135 -0.0719 0.533 -0.21575 0.1417 -0.14365 0.2125 -0.32175 0.2125 -0.53425v-4.1c0 -0.2125 -0.0723 -0.39065 -0.217 -0.5345 -0.1445 -0.14365 -0.32365 -0.2155 -0.5375 -0.2155 -0.21365 0 -0.3913 0.07185 -0.533 0.2155 -0.14165 0.14385 -0.2125 0.322 -0.2125 0.5345v4.1c0 0.2125 0.07235 0.3906 0.217 0.53425 0.1445 0.14385 0.3237 0.21575 0.5375 0.21575Z"
@@ -152,24 +183,37 @@
             </svg>
           </span>
           <br />
+          <!-- error message -->
+           <!-- error string -->
           <p>Something went wrong :(</p>
         </div>
+
+
+        <!-- textarea result -->
         <div class="result-wrapper">
+        
           <textarea id="tableResult" rows="9"></textarea>
         </div>
       </div>
 
       <!-- preview -->
       <div class="previewConf">
+      <!-- head line -->
         <div class="tablePreview" id="previewSuccess">
           <strong>Preview of table</strong>
         </div>
+
+        <!-- table viewer -->
         <div id="markdownResult">
           <!-- generated here -->
         </div>
+
+        <!-- end table viewer -->
       </div>
       <!-- preview end -->
     </div>
+
+    <!-- footer -->
 
     <footer>
       <div>
@@ -218,13 +262,18 @@
       </div>
     </footer>
 
+    <!-- scripts -->
     <!-- Local jQuery file included, but switch the comments below to load from Google's jQuery CDN instead -->
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <script src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/micromarkdown.js"></script>
     <script src="tableMaker.js"></script>
 
+    <!-- spectrum js idk what is this doing -->
     <script src="js/spectrum.js"></script>
+    <!-- spectrum css -->
     <link rel="stylesheet" href="css/spectrum.css" />
   </body>
+
+  <!-- end -->
 </html>
