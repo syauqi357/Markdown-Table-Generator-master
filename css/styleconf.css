@@ -1,94 +1,4 @@
-/* font */
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Text&display=swap");
-
-
 /* refactor session */
-
-/* main code css style reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Stack Sans Text", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-/* code block */
-code {
-  background: linear-gradient(145deg, #e0e0e0, #c8c8c8);
-  padding: 2px 6px;
-  border-radius: 6px;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 14px;
-  border: 1px solid #a0a0a0;
-  border-bottom: 2px solid #909090;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
-    inset 0 1px 2px rgba(255, 255, 255, 0.6);
-  color: #222;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
-  position: relative;
-  display: inline-block;
-  animation: keyPulse 3s infinite ease-in-out;
-  transition: all 0.1s ease;
-}
-
-/* Add a subtle pressed effect on active state */
-code:active {
-  transform: translateY(1px);
-  border-bottom: 1px solid #909090;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-/* Softer pulsing animation */
-@keyframes keyPulse {
-  0% {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
-      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 0 0 rgba(200, 200, 200, 0.3);
-  }
-  50% {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
-      inset 0 1px 2px rgba(255, 255, 255, 0.6),
-      0 0 0 3px rgba(200, 200, 200, 0.1);
-  }
-  100% {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
-      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 0 0 rgba(200, 200, 200, 0.3);
-  }
-}
-
-/* Optional: Even lighter subtle glow */
-code.glow {
-  animation: keyGlowPulse 3s infinite ease-in-out;
-}
-
-@keyframes keyGlowPulse {
-  0% {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
-      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 3px rgba(150, 150, 255, 0.2);
-  }
-  50% {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
-      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 8px rgba(150, 150, 255, 0.3);
-  }
-  100% {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
-      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 3px rgba(150, 150, 255, 0.2);
-  }
-}
-
-
-.headTitle {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  letter-spacing: 2px;
-  font-weight: 700;
-}
 
 /* main class parent */
 #tablemaker {
@@ -100,200 +10,6 @@ code.glow {
   text-align: center;
   margin: auto;
 }
-
-
-/* cta xt dan hover : start */
-.cta_xt1 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: small;
-  letter-spacing: 0.4px;
-  background-color: #ececec;
-  padding: 7px;
-  border: 0.2px solid #cacaca;
-  border-radius: 5px;
-  transition: all 0.2s ease-in-out;
-}
-
-.cta_xt1:hover {
-  background-color: #e6e6e6;
-  border: 0.2px solid #a8a8a8;
-  cursor: default;
-}
-
-/* cta xt dan hover : end */
-
-/* textedit style : start */
-.textEdit {
-  display: flex;
-  justify-content: center;
-  font-size: 14px;
-  width: 100%;
-  padding: 0.8em;
-  border-radius: 0.32em;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-  font-family: "JetBrains Mono", monospace;
-}
-
-.textEdit:focus {
-  outline: none;
-  border: 1px solid #719ece;
-}
-
-/* textedit style : end */
-
-/* detail panel */
-
-.detailsPanel {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  font-size: 13px;
-  gap: 1rem;
-}
-
-.controlMenus {
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: start;
-  gap: 0.2em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.delimiter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  padding: 0.7em 0em;
-}
-
-.delimiter label {
-  font-size: 14px;
-  width: 12em;
-}
-
-
-.checkControl {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 0.2px;
-}
-
-.wikiReff {
-  padding: 0.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: start;
-  gap: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.wikiCheck {
-  display: flex;
-  align-items: center;
-  gap: 0.4em;
-}
-
-
-.cellcol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1em;
-}
-
-.tableCaption {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5em;
-}
-
-
-.resultTable {
-  margin-top: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  border-radius: 0.32em;
-}
-
-.resultTable > div {
-  width: 80%;
-}
-
-/* success pop up : start */
-.success {
-  text-align: center;
-  color: #008000;
-  font-size: 18px;
-  font-weight: bold;
-  display: none;
-  background-color: #f8f8f8;
-  margin: 1em;
-  padding: 1em;
-  border-radius: 5px;
-}
-
-.success span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.success svg {
-  width: 24px;
-  height: 24px;
-  fill: #008000;
-}
-
-/* success pop up : end */
-
-
-
-
-/* failed pop up : start */
-.failed {
-  margin: 1em;
-  text-align: center;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: bold;
-  display: none;
-  background-color: #d83c3c;
-  padding: 1em;
-  border-radius: 5px;
-}
-
-.failed span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.failed svg {
-  width: 24px;
-  height: 24px;
-  fill: #ffffff;
-}
-
-/* failed pop up : end */
-
 
 /* textarea result style : start */
 #tableResult {
@@ -314,28 +30,11 @@ code.glow {
   border: 1px solid #719ece;
 }
 
-/* textarea result style : end */
-
-.previewConf {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.tablePreview {
-  padding: 0.4em;
-  text-align: center;
-  font-size: 14px;
-  font-size: 2em;
-}
-
-
 #markdownResult {
   background-color: #ffffff;
   margin: auto;
   margin-bottom: 1em;
 }
-
 
 /* result style */
 /* from html inline style injection */
@@ -365,13 +64,9 @@ th {
 }
 /* pokok jangan di ubah */
 
-/* style added */
-
-
 /* end of added style */
 
 /* footer style */
-
 
 footer {
   position: relative;
@@ -385,26 +80,6 @@ footer {
 footer > div {
   width: 100%; /* Make the inner div full width too */
   max-width: 100%; /* Remove any max-width restriction */
-}
-
-
-/* Keep the rest of your styles */
-.reportBugs {
-  margin-bottom: 10px;
-}
-
-.reportBugs a {
-  color: #0062e2;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 5px 10px;
-  background-color: rgba(73, 201, 240, 0.185);
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.reportBugs a:hover {
-  background-color: #e9f6ff;
 }
 
 footer p {
