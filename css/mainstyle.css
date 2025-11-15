@@ -1,0 +1,79 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Text&display=swap");
+
+/* main code css style reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Stack Sans Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* code block */
+code {
+  background: linear-gradient(145deg, #e0e0e0, #c8c8c8);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  border: 1px solid #a0a0a0;
+  border-bottom: 2px solid #909090;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  color: #222;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  position: relative;
+  display: inline-block;
+  animation: keyPulse 3s infinite ease-in-out;
+  transition: all 0.1s ease;
+}
+
+/* Add a subtle pressed effect on active state */
+code:active {
+  transform: translateY(1px);
+  border-bottom: 1px solid #909090;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Softer pulsing animation */
+@keyframes keyPulse {
+  0% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 0 0 rgba(200, 200, 200, 0.3);
+  }
+  50% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6),
+      0 0 0 3px rgba(200, 200, 200, 0.1);
+  }
+  100% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 0 0 rgba(200, 200, 200, 0.3);
+  }
+}
+
+/* Optional: Even lighter subtle glow */
+code.glow {
+  animation: keyGlowPulse 3s infinite ease-in-out;
+}
+
+@keyframes keyGlowPulse {
+  0% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 3px rgba(150, 150, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 8px rgba(150, 150, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 0 3px rgba(150, 150, 255, 0.2);
+  }
+}
