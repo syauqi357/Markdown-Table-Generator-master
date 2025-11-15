@@ -1,0 +1,7 @@
+.headTitle {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
