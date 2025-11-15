@@ -5,3 +5,223 @@
   letter-spacing: 2px;
   font-weight: 700;
 }
+
+/* cta xt dan hover : start */
+.cta_xt1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: small;
+  letter-spacing: 0.4px;
+  background-color: #ececec;
+  padding: 7px;
+  border: 0.2px solid #cacaca;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta_xt1:hover {
+  background-color: #e6e6e6;
+  border: 0.2px solid #a8a8a8;
+  cursor: default;
+}
+
+/* cta xt dan hover : end */
+
+/* textedit style : start */
+.textEdit {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 0.32em;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.textEdit:focus {
+  outline: none;
+  border: 1px solid #719ece;
+}
+
+/* textedit style : end */
+
+/* detail panel */
+
+.detailsPanel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 13px;
+  gap: 1rem;
+}
+
+.controlMenus {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 0.2em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.delimiter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0.7em 0em;
+}
+
+.delimiter label {
+  font-size: 14px;
+  width: 12em;
+}
+
+.checkControl {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.2px;
+}
+
+.wikiReff {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.wikiCheck {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.cellcol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.tableCaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.resultTable {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0.32em;
+}
+
+.resultTable > div {
+  width: 80%;
+}
+
+/* success pop up : start */
+.success {
+  text-align: center;
+  color: #008000;
+  font-size: 18px;
+  font-weight: bold;
+  display: none;
+  background-color: #f8f8f8;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.success span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.success svg {
+  width: 24px;
+  height: 24px;
+  fill: #008000;
+}
+
+/* success pop up : end */
+
+/* failed pop up : start */
+.failed {
+  margin: 1em;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  display: none;
+  background-color: #d83c3c;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.failed span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.failed svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+/* failed pop up : end */
+
+/* textarea result style : end */
+
+.previewConf {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.tablePreview {
+  padding: 0.4em;
+  text-align: center;
+  font-size: 14px;
+  font-size: 2em;
+}
+
+/* Keep the rest of your styles */
+.reportBugs {
+  margin-bottom: 10px;
+}
+
+.reportBugs a {
+  color: #0062e2;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  background-color: rgba(73, 201, 240, 0.185);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.reportBugs a:hover {
+  background-color: #e9f6ff;
+}
